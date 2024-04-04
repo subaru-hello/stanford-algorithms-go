@@ -17,7 +17,7 @@ func main() {
 }
 
 
-
+// if the sizes of n is an odd, it should extract a bigger of half of n
 func getMaxLength(x,y *big.Int) int {
     xLen := len(x.String());
     yLen := len(y.String());
