@@ -47,6 +47,6 @@ ac * 10 ** n + (10 ** n/2) * (ad + bc) + bd
 2 recursively compute bd
 3 recursively compute (a + b)(c + d) ac ad bc bd
 4 3 - 1 - 2 = ad + bc
-5 10 ** n * 4 + 2 + 10 ** n/2 * 1
+5 10 ** n * ④ + 10 ** n/2 * ① + ②
 5 ac * 10 ** n + 10 ** n/2 * (ad + bc) + bd
 ```
