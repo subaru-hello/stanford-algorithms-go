@@ -8,18 +8,19 @@ import (
 	"strconv"
 )
 
-func mergeSort(items []int)[]int{
+// mergeSort divides the passed items (number array) into two, unless its size is less than 2.
+func mergeSort(items []int) []int {
 	// base case
-if(len(items) < 2){
-	return items
-}
-first := mergeSort(items[:len(items)/2])
-second := mergeSort(items[len(items)/2:])
-return merge(first, second)
+	if len(items) < 2 {
+		return items
+	}
+	first := mergeSort(items[:len(items)/2])
+	second := mergeSort(items[len(items)/2:])
+	return merge(first, second)
 }
 
-// after sorted and devided into one piece, merge them all into one array.
-func merge(x,y []int) []int {
+// merge combines two sorted sub-arrays into one sorted array.
+func merge(x, y []int) []int {
 	finalOutput := []int{}
 	i := 0
 	j := 0
@@ -38,13 +39,14 @@ func merge(x,y []int) []int {
 	for ; i < len(x); i++ {
 		finalOutput = append(finalOutput, x[i])
 	}
-	// Append remaining elements of y (fixed: changed i to j)
+	// Append remaining elements of y
 	for ; j < len(y); j++ {
 		finalOutput = append(finalOutput, y[j])
 	}
 	return finalOutput
 }
 
+// readIntegersFromFile reads integers from a file and returns them as a slice.
 func readIntegersFromFile(fileName string) ([]int, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
@@ -69,14 +71,14 @@ func readIntegersFromFile(fileName string) ([]int, error) {
 	return integers, nil
 }
 
-func main(){
-	fileName := "integerArray.txt" // Replace with your file's path
+func main() {
+	fileName := "integerArray.txt"
 	integers, err := readIntegersFromFile(fileName)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-    // unsorted := []int{10, 6, 2, 1, 5, 8, 3, 4, 7, 9}
-    sorted := mergeSort(integers)
+	// unsorted := []int{10, 6, 2, 1, 5, 8, 3, 4, 7, 9}
+	sorted := mergeSort(integers)
 	fmt.Println(sorted)
 }
