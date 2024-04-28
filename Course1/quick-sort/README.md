@@ -33,3 +33,7 @@ Here’s an improved explanation of Quicksort:
 ## Conclusion:
 
 Quicksort is generally faster than other O(n log n) algorithms like merge sort, due to lower overhead and better locality of reference. However, its performance heavily depends on the choice of pivot. In practical implementations, a hybrid approach often works best, such as using insertion sort for small sub-arrays and a 'median of three' for pivot selection to balance the efficiency and computational cost. Random pivots are a good default choice due to their simplicity and good average case performance.
+
+## when chosen the first element of the array
+
+![alt text](image.png)
