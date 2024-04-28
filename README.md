@@ -10,3 +10,17 @@
 - closest pairs
 - strassans algorithm(cubic merge sort)
 - quick sort
+
+## Go basic
+
+- init a project
+
+```
+go mod index
+```
+
+- formating
+
+```
+gofmt -w  index.go
+```
