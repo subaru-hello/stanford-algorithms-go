@@ -36,4 +36,11 @@ Quicksort is generally faster than other O(n log n) algorithms like merge sort, 
 
 ## when chosen the first element of the array
 
-![alt text](image.png)
+![](https://storage.googleapis.com/zenn-user-upload/b7b628769612-20240429.png)
+
+![](https://storage.googleapis.com/zenn-user-upload/9c24e90ad398-20240429.png)
+
+## reference
+
+https://www.youtube.com/watch?v=ETo1cpLN7kk&list=PLXFMmlk03Dt7Q0xr1PIAriY5623cKiH7V&index=26
+https://github.com/pco2699/algorithms/blob/master/quicksort/src/main.rs
