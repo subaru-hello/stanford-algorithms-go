@@ -9,6 +9,12 @@ For instance, given a graph G with an initial vertex v and a next vertex w, the 
 In the worst-case scenario, the Karger min cut algorithm runs in
 𝑂(𝑁^2log⁡𝑁) time because the total calculation time reduces by half with each iteration of the computation process. To the contrary, in the best-case scenario, the running time would be O(N^2) due to fewer iterations required when the graph is simplified more quickly with each contraction.
 
+## Pseudocode
+
+1. Read and Parse the Graph: First, we need to read the graph from the file and parse it into an adjacency list representation.
+2. Contract Edges: We repeatedly contract randomly chosen edges until only two vertices remain.
+3. Repeat the Process: We repeat the contraction process multiple times to ensure a higher probability of finding the minimum cut.
+
 ## Simple Algorithm
 
 Here is the code written in Go:

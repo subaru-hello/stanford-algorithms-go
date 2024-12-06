@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
-	"time"
+	// "time"
 )
 
 func main() {
@@ -35,9 +35,7 @@ func exec(arr []int, rule string, sum int) int {
 func quickSort(arr []int, rule string, sum int) int {
 	N := len(arr)
 	// base case
-	if N < 1 {
-		fmt.Print("base case")
-		fmt.Println(arr)
+	if (N <= 1) {
 		return sum
 	}
 
@@ -50,9 +48,9 @@ func quickSort(arr []int, rule string, sum int) int {
 	// 3 quick sort right side elements
 	quickSort(arr[index+1:], rule, sum)
 	// add index to sum
-	sum += len(arr[index+1:]) - 1 - index
+	// sum += len(arr) - 1  -index
 	// fmt.Print("↓result sum↓")
-	// fmt.Println(sum)
+	fmt.Println(sum)
 	// fmt.Print("↓sorted array↓")
 	// fmt.Println(arr)
 	return sum
@@ -82,8 +80,8 @@ func partition(arr []int, rule string) int {
 	}
 	// return pivot to its original place.
 	swap(arr, 0, i-1)
-	i -= 1
-	return i
+	 i -= 1
+return i 
 }
 
 // TODO: define Pivot constants → First, Middle, Last

@@ -38,12 +38,20 @@ func (pq *PriorityQueue) updatePq(item *Item, priority int) {
 }
 
 func main() {
+	
 
-	n := 
+	heap1 := make(PriorityQueue, 0)
+	// heap2 := make(PriorityQueue, 0)
 
-	heap1 := make([]int, 0)
-	heap2 := make([]int, 0)
+	// extract median of given array
+	arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	for i:=0; i<len(arr); i++ {
+		heap.Push(&heap1, arr[i])
+	}
+	// create min-heap and max-heap
+	// heap.Init(&heap1)
+	// heap.Init(&heap2)
 
-	fmt.Println("Hello, World!")
+	fmt.Println(heap1)
 }
 
